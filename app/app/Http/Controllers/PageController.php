@@ -10,4 +10,14 @@ class PageController extends Controller
     {
         return view('home');
     }
+    
+    public function about(): View
+    {
+        return view('about');
+    }
+    
+    public function contact(): View
+    {
+        return view('contact');
+    }
 }

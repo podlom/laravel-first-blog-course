@@ -8,6 +8,7 @@
 
 ## Урок 2 - Встановлення та запуск Laravel
 
+
 ## Урок 3 - Перший маршрут, контролер і шаблон для Laravel
 
 - Додав PageController у app/app/Http/Controllers/PageController.php

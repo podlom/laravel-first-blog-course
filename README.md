@@ -33,3 +33,6 @@
 php artisan make:migration create_posts_author_column
 ```
 
+## Урок 6 - Створення поста через HTML-форму в Laravel
+
+

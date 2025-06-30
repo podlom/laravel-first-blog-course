@@ -10,7 +10,7 @@
 <body>
 	<div class="container mt-5">
 		<h1 class="text-center text-primary text-3xl font-bold underline">Contact Laravel Blog</h1>
-		<p class="text-muted text-center">Styled with Bootstrap 5 and Tailwind 🎨</p>
+		<p class="text-center text-info">Styled with Bootstrap 5 and Tailwind 🎨</p>
 	</div>
 </body>
 </html>

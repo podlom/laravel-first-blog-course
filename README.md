@@ -21,3 +21,10 @@
 - Оновлено файли routes/web.php та app/Http/Controllers/PageController.php додано нові сторінки /about та /contact
 - Оновлено шаблон головної сторінки app/resources/views/home.blade.php (підключено Bootstrap та Tailwind)
 
+## Урок 5 - Підключення бази даних і перша модель у Laravel
+
+- Оновив файли домашнього завдання з уроку 4: resources/views/contact.blade.php та resources/views/about.blade.php
+- Додав файл міграції app/database/migrations/2025_06_30_082557_create_posts_table.php
+- Додав модель app/app/Models/Post.php
+
+

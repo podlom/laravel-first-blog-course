@@ -25,5 +25,11 @@
 - Оновив файли домашнього завдання з уроку 4: resources/views/contact.blade.php та resources/views/about.blade.php
 - Додав файл міграції app/database/migrations/2025_06_30_082557_create_posts_table.php
 - Додав модель app/app/Models/Post.php
+- Домашка до уроку додав міграцію app/database/migrations/2025_06_30_084812_create_posts_author_column.php
 
+Команда для створення файлу міграції:
+
+```bash
+php artisan make:migration create_posts_author_column
+```
 

@@ -12,5 +12,22 @@
 		<h1 class="text-center text-primary text-3xl font-bold underline">Contact Laravel Blog</h1>
 		<p class="text-center text-info">Styled with Bootstrap 5 and Tailwind 🎨</p>
 	</div>
+	<div class="container m5-5 messages">
+		@if (session('success'))
+			<div class="alert alert-success mt-4">
+				{{ session('success') }}
+			</div>
+		@endif
+		
+		@if ($errors->any())
+			<div class="alert alert-danger">
+				<ul>
+					@foreach ($errors->all() as $error)
+						<li>{{ $error }}</li>
+					@endforeach
+				</ul>
+			</div>
+		@endif
+	</div>
 </body>
 </html>

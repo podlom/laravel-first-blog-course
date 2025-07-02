@@ -24,6 +24,7 @@ class StorePostRequest extends FormRequest
         return [
             'title' => 'required|min:3',
             'content' => 'required|min:10',
+            'author' => 'required|min:3',
         ];
     }
 }

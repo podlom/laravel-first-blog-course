@@ -8,5 +8,11 @@
         <label>Content</label>
         <textarea name="content" class="form-control" rows="5" required></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Create Post</button>
+    <div class="mb-3">
+        <label>Author</label>
+        <input type="text" name="author" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Create Post</button>
+    </div>
 </form>

@@ -28,7 +28,7 @@
         <div class="card mb-3">
             <div class="card-body">
                 <header class="py-3 mb-4 border-bottom">
-                    <h3 class="card-title"><span class="date">{{ $post->created_at->format('d.m.Y') }}</span> &laquo;{{ $post->title }}&raquo;</h3>
+                    <h3 class="card-title"><a href="{{ url('/posts/' . $post->id) }}"><span class="date">{{ $post->created_at->format('d.m.Y') }}</span> &laquo;{{ $post->title }}&raquo;</a></h3>
                 </header>
 
                 <p class="card-text">{{ \Illuminate\Support\Str::limit($post->content, 150) }} ...</p>

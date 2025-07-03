@@ -9,6 +9,44 @@
 [Рєструйтесь на Digital Ocean](https://m.do.co/c/cfcb074144ad)
 
 
+- Кроки для встановлення та запуску:
+
+```bash
+git clone git@github.com:podlom/laravel-first-blog-course.git ./laravel-first-blog
+cd laravel-first-blog
+cp -fvp app/.env.example app/.env
+```
+
+- Прописати в app/.env параметри підключення до бази даних MySQL аналогічні до docker-compose.yml із секції mysql
+
+- Перший запуск у Docker:
+
+```bash
+docker-compose up -d --build
+```
+
+- Зайти в контейнер laravel_app через Bash (або через Docker Desktop через Open in terminal в контейнері laravel_app) та виконати команди:
+
+```bash
+composer install
+php artisan key:generate
+php artisan migrate
+```
+
+- Зупинка Docker:
+
+```bash
+docker-compose down
+docker-compose stop
+```
+
+- Наступні запуски у Docker:
+
+```bash
+docker-compose up -d
+```
+
+
 ## Урок 2 - Встановлення та запуск Laravel
 
 Корисні команди для роботи з Docker
@@ -25,7 +63,7 @@ docker ps -a
 docker exec -it laravel_app bash
 ```
 
-- Вийти з контейнер laravel_app через Bash: 
+- Вийти з контейнеру laravel_app: 
 
 ```bash
 exit
@@ -97,6 +135,7 @@ php artisan migrate:status
 - Додав app/resources/views/layouts/app.blade.php - layout батьківський шаблон
 - Додав метод PostController::index для відображення списку постів в файлі app/app/Http/Controllers/PostController.php
 - Оновив маршрут / в файлі app/routes/web.php
+- Домашка до 7-го уроку. Оновив: app/app/Http/Controllers/PostController.php, app/resources/views/posts/index.blade.php та app/routes/web.php. Додав app/resources/views/posts/show.blade.php - шаблон на відображення одного поста.
 
 
 

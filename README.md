@@ -1,13 +1,35 @@
 # Урок 1 - Вступ до Laravel
 
 Ключові зміни:
+
 - Додав Laravel
 - Docker setup
+
 
 [Рєструйтесь на Digital Ocean](https://m.do.co/c/cfcb074144ad)
 
 
 ## Урок 2 - Встановлення та запуск Laravel
+
+Корисні команди для роботи з Docker
+
+- Переглянути список контейнерів:
+
+```bash
+docker ps -a
+```
+
+- Зайти в контейнер laravel_app через Bash: 
+
+```bash
+docker exec -it laravel_app bash
+```
+
+- Вийти з контейнер laravel_app через Bash: 
+
+```bash
+exit
+```
 
 
 ## Урок 3 - Перший маршрут, контролер і шаблон для Laravel
@@ -69,25 +91,12 @@ php artisan migrate:status
 - Домашка до уроку. Оновив файли: app/app/Http/Requests/StorePostRequest.php, app/app/Models/Post.php та app/resources/views/posts/create.blade.php
 
 
-Корисні команди для роботи з Docker
+## Урок 7 - Виведення списку постів на головній сторінці
 
-- Переглянути список контейнерів:
-
-```bash
-docker ps -a
-```
-
-- Зайти в контейнер laravel_app через Bash: 
-
-```bash
-docker exec -it laravel_app bash
-```
-
-- Вийти з контейнер laravel_app через Bash: 
-
-```bash
-exit
-```
+- Додав файл app/resources/views/posts/index.blade.php - шаблон для відображення постів на головній сторінці
+- Додав app/resources/views/layouts/app.blade.php - layout батьківський шаблон
+- Додав метод PostController::index для відображення списку постів в файлі app/app/Http/Controllers/PostController.php
+- Оновив маршрут / в файлі app/routes/web.php
 
 
 

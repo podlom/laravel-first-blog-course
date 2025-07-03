@@ -23,4 +23,16 @@ class PostController extends Controller
 
 		return redirect('/')->with('success', 'Post created!');
 	}
+	
+	public function index(): View
+	{
+		$posts = Post::latest()->get();
+		
+		return view('posts.index', compact('posts'));
+	}
+
+	public function show(Post $post): View
+	{
+	    return view('posts.show', compact('post'));
+	}
 }

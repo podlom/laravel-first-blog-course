@@ -30,7 +30,13 @@
         <div class="card mb-3">
             <div class="card-body">
                 <header class="py-3 mb-4 border-bottom">
-                    <h3 class="card-title text-center"><a href="{{ url('/posts/' . $post->id) }}">&laquo;{{ $post->title }}&raquo;</a></h3>
+                    <h3 class="card-title text-center"><span class="date">{{ $post->created_at->format('d.m.Y') }}</span>
+
+                    <a href="{{ url('/posts/' . $post->id) }}">&laquo;{{ $post->title }}&raquo;</a></h3>
+
+                    @if(!empty($post->author))
+                        <p class="text-secondary fst-italic">Автор: {{ $post->author }}</p>
+                    @endif
                 </header>
 
                 <p class="card-text">{{ \Illuminate\Support\Str::limit($post->content, 155) }}</p>

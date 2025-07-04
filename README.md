@@ -139,7 +139,9 @@ php artisan migrate:status
 
 
 
+## Урок 8 - Перегляд одного поста в Laravel (Post Details Page)
 
+- Оновлено шаблони app/resources/views/layouts/app.blade.php, app/resources/views/posts/index.blade.php та app/resources/views/posts/show.blade.php
 
 
 

@@ -40,6 +40,8 @@
                 </header>
 
                 <p class="card-text">{{ \Illuminate\Support\Str::limit($post->content, 155) }}</p>
+
+                <a class="btn btn-primary mt-3" href="{{ url('/posts/' . $post->id) }}">Читати далі</a>
             </div>
         </div>
     @endforeach

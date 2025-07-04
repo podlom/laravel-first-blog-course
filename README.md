@@ -49,6 +49,11 @@ docker-compose up -d
 
 ## Урок 2 - Встановлення та запуск Laravel
 
+Домашнє завдання:
+
+- Встановіть та запустіть Docker Desktop: https://docs.docker.com/desktop/ для вашої робочої ОС.
+
+
 Корисні команди для роботи з Docker
 
 - Переглянути список контейнерів:
@@ -77,11 +82,23 @@ exit
 - Змінив route головної сторінки на PageController у app/routes/web.php
 
 
+Домашнє завдання:
+
+- Створи сторінки [/about](http://localhost:8080/about) і [/contacts](http://localhost:8080/contacts) з відповідним текстом.
+- Оформи кожну сторінку окремим шаблоном.
+
+
 ## Урок 4 - Підключення CSS до Laravel. Робимо сторінку привабливою
 
 - Додав файли домашнього завдання з уроку 3: resources/views/about.blade.php та resources/views/contact.blade.php
 - Оновлено файли routes/web.php та app/Http/Controllers/PageController.php додано нові сторінки /about та /contact
 - Оновлено шаблон головної сторінки app/resources/views/home.blade.php (підключено Bootstrap та Tailwind)
+
+
+Домашнє завдання:
+
+- Створи красиву сторінку "Про нас" [/about](http://localhost:8080/about).
+- Додай тло, кольори та вирівнювання за допомогою Bootstrap.
 
 
 ## Урок 5 - Підключення бази даних і перша модель у Laravel
@@ -90,6 +107,12 @@ exit
 - Додав файл міграції app/database/migrations/2025_06_30_082557_create_posts_table.php
 - Додав модель app/app/Models/Post.php
 - Домашка до уроку додав міграцію app/database/migrations/2025_06_30_084812_create_posts_author_column.php
+
+
+Домашнє завдання:
+
+- Додай до таблиці posts поле author.
+- Створи 2-3 записи вручну через Tinker або [Adminer](http://localhost:8081/) як тобі буде зручніше.
 
 
 Корисні посилання:
@@ -129,6 +152,12 @@ php artisan migrate:status
 - Домашка до уроку. Оновив файли: app/app/Http/Requests/StorePostRequest.php, app/app/Models/Post.php та app/resources/views/posts/create.blade.php
 
 
+Домашнє завдання:
+
+- Додай поле author у форму.
+- Зроби редірект на сторінку /posts (у наступному уроці зробимо її).
+
+
 ## Урок 7 - Виведення списку постів на головній сторінці
 
 - Додав файл app/resources/views/posts/index.blade.php - шаблон для відображення постів на головній сторінці
@@ -138,11 +167,22 @@ php artisan migrate:status
 - Домашка до 7-го уроку. Оновив: app/app/Http/Controllers/PostController.php, app/resources/views/posts/index.blade.php та app/routes/web.php. Додав app/resources/views/posts/show.blade.php - шаблон на відображення одного поста.
 
 
+Домашнє завдання:
+
+- Додай на кожну картку кнопку "Читати далі" (посилання на /posts/{post}).
+- Створи та підключи шаблон app/resources/views/posts/show.blade.php (у наступному уроці).
+
 
 ## Урок 8 - Перегляд одного поста в Laravel (Post Details Page)
 
 - Оновлено шаблони app/resources/views/layouts/app.blade.php, app/resources/views/posts/index.blade.php та app/resources/views/posts/show.blade.php
+- Додав домашку 8-го уроку.
 
+
+Домашнє завдання:
+
+- Додай поле author в шаблони app/resources/views/posts/index.blade.php та app/resources/views/posts/show.blade.php
+- Виведи дату створення поста в шаблоні app/resources/views/posts/index.blade.php
 
 
 

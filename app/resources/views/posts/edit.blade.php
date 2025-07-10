@@ -4,6 +4,24 @@
 
 @section('content')
     <div class="container mt-5">
+        <div class="messages-container flash-messages">
+            @if (session('success'))
+                <div class="alert alert-success mt-4">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+        </div>
+
         <h1>Edit Post &laquo;{{ $post->title }}&raquo; @if(!empty($post->author)) by: {{ $post->author }}@endif</h1>
 
         <form action="/posts/{{ $post->id }}" method="POST">

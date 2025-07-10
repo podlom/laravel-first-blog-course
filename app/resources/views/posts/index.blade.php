@@ -10,7 +10,7 @@
                 {{ session('success') }}
             </div>
         @endif
-        
+
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -45,5 +45,9 @@
             </div>
         </div>
     @endforeach
+
+    <div class="mt-4">
+        <a href="{{ url('/posts/create') }}" class="btn btn-primary mt-3">Додати пост</a>
+    </div>
 </div>
 @endsection

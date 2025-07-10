@@ -185,4 +185,66 @@ php artisan migrate:status
 - Виведи дату створення поста в шаблоні app/resources/views/posts/index.blade.php
 
 
+## Урок 9 - Редагування і оновлення поста в Laravel (Edit & Update)
+
+- Додав нові actions в app/app/Http/Controllers/PostController.php.
+- Новий клас для валідації оновлення інформації поста app/app/Http/Requests/UpdatePostRequest.php.
+- Оновив форму редагування поста app/resources/views/posts/edit.blade.php.
+- Додав кнопку створпення нового поста app/resources/views/posts/index.blade.php.
+- Виводжу список повідомлень в шаблон перегляду поста app/resources/views/posts/show.blade.php.
+- Нові маршрути додано в app/routes/web.php.
+
+
+Домашнє завдання:
+- Додай кнопку “Редагувати” на сторінку перегляду поста (app/resources/views/posts/show.blade.php).
+- Додай валідацію на унікальність заголовка в обидва класи StorePostRequest та UpdatePostRequest.
+
+
+### Встановлення та включення debug панелі Telescope
+
+- Команда для встановлення Telescope:
+
+```bash
+composer require laravel/telescope --dev
+```
+
+- Publish Telescope Assets and Configuration
+
+```bash
+php artisan telescope:install
+php artisan migrate
+```
+
+- Переконайтесь, що у вас правильно налаштовано .env
+
+```env
+APP_ENV=local
+APP_DEBUG=true
+
+# Цей рядок треба додати
+TELESCOPE_ENABLED=true
+```
+
+- Після внесення змін у .env файл виконайте команди
+
+```bash
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear
+```
+
+- Після внесення змін перезапустіть локальний веб сервер
+
+```bash
+php artisan serve
+```
+
+- Або, якщо ви використовуєте Docker setup
+
+```bash
+docker-compose stop
+docker-compose up -d
+```
+
+- Для перегляду консолі Telescope скористайтесь [таким посиланням](http://localhost:8000/telescope).
 

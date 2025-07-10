@@ -22,7 +22,7 @@ class StorePostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required|min:3',
+            'title' => 'required|string|min:3|unique:posts,title',
             'content' => 'required|min:10',
             'author' => 'required|min:3',
         ];

@@ -34,9 +34,16 @@
         {{ $post->content }}
     </div>
 
-    <div class="mt-4">
-        <a href="/" class="btn btn-secondary mt-3">← Назад</a>
-        <a href="{{ url('/posts/' . $post->id . '/edit') }}" class="btn btn-primary mt-3">Редагувати</a>
+    <div class="mt-4 d-flex gap-2 align-items-center">
+        <a href="/" class="btn btn-secondary">← Назад</a>
+
+        <a href="{{ url('/posts/' . $post->id . '/edit') }}" class="btn btn-primary">Редагувати</a>
+
+        <form action="/posts/{{ $post->id }}" method="POST" onsubmit="return confirm('Ви впевнені, що хочете видалити цей пост?');">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger">Видалити</button>
+        </form>
     </div>
 </div>
 @endsection

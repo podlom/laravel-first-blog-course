@@ -248,3 +248,27 @@ docker-compose up -d
 
 - Для перегляду консолі Telescope скористайтесь [таким посиланням](http://localhost:8000/telescope).
 
+
+## Урок 10 - Видалення поста (Delete Post + Захист)
+
+- Додав script для запуску Laravel pint в app/composer.json.
+- Виправлення стилю коду в файлах за допомогою Laravel pint: app/app/Http/Controllers/PageController.php, app/app/Http/Controllers/PostController.php, app/database/migrations/2025_06_30_082557_create_posts_table.php, app/resources/views/posts/show.blade.php та app/routes/web.php.
+- Додав новий action destroy на видалення поста в app/app/Http/Controllers/PostController.php.
+- Оновив форму відображення одного поста app/resources/views/posts/show.blade.php додано кнопку видалення поста.
+- Додав кнопку видалення в перелік постів app/resources/views/posts/index.blade.php.
+- Нові маршрут на видалення поста додано в app/routes/web.php.
+
+
+Домашнє завдання:
+- Додай окрему кнопку “Видалити” в списку постів.
+- Зроби стилями Bootstrap так, щоб кнопки виглядали красиво і були вирівняні в один рядок, а не одна під одною.
+
+
+### Автоматичне виправлення коду за допомогю Laravel pint
+
+- Команда для запуску Laravel pint:
+
+```bash
+composer pint
+```
+

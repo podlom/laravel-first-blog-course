@@ -41,7 +41,15 @@
 
                 <p class="card-text">{{ \Illuminate\Support\Str::limit($post->content, 155) }}</p>
 
-                <a class="btn btn-primary mt-3" href="{{ url('/posts/' . $post->id) }}">Читати далі</a>
+                <div class="mt-4 d-flex gap-2 align-items-center">
+                    <a class="btn btn-primary" href="{{ url('/posts/' . $post->id) }}">Читати далі</a>
+
+                    <form action="/posts/{{ $post->id }}" method="POST" onsubmit="return confirm('Ви впевнені, що хочете видалити цей пост?');">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger">Видалити</button>
+                    </form>
+                </div>
             </div>
         </div>
     @endforeach

@@ -49,4 +49,11 @@ class PostController extends Controller
 
         return redirect("/posts/{$post->id}")->with('success', 'Post updated!');
     }
+
+    public function destroy(Post $post): RedirectResponse
+    {
+        $post->delete();
+
+        return redirect('/')->with('success', 'Post deleted!');
+    }
 }
